@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#enlargedImage {
+    width: 100%;
+    height: auto;
+}
+
+#imageInfo {
+    position: fixed;
+}
