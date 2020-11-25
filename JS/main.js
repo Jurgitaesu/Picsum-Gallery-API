@@ -8,6 +8,9 @@ fetch('https://picsum.photos/v2/list')
             const img = document.createElement("img");
             img.src = out[i].download_url;
             img.addEventListener("click", function () {
+                document.getElementById("text").style.display = "none";
+                var enlargedImage = document.getElementById("enlargedImage");
+                enlargedImage.src = out[i].download_url;
                 imageInfo.style.display = "block";
                 var imageAuthor = document.getElementById("imageAuthor");
                 imageAuthor.innerHTML = out[i].author;
@@ -15,9 +18,6 @@ fetch('https://picsum.photos/v2/list')
                 imageWidth.innerHTML = out[i].width;
                 var imageHeight = document.getElementById("imageHeight");
                 imageHeight.innerHTML = out[i].height;
-                var enlargedImage = document.getElementById("enlargedImage");
-                enlargedImage.src = out[i].download_url;
-
             })
 
             document.getElementById("imageList").appendChild(img);
